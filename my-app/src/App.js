@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 //return()のdivの中に具体的なアプリケーションを書いていく
 
@@ -66,6 +67,7 @@ function App() {
   }
 
   return (
+    <BrowserRouter>
     <div className="App">
       <h1>じゃんけん</h1>
       <div className="Enemy">
@@ -90,6 +92,7 @@ function App() {
       <div id="result"></div>
       <button id="continue" onClick={pressContinue}>続ける</button>
     </div>
+    </BrowserRouter>
   );
 }
 
