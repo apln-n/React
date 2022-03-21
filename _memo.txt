@@ -1,0 +1,11 @@
+npm start
+	Create React Appをやった作成したディレクトリで実行すると起動できる
+		Create React App(開発環境作成)のコマンド(最初のみ)
+			npx create-react-app プロジェクト名
+	参考:
+		https://www.webdesignleaves.com/pr/jquery/react_basic_01.html
+
+基本的にindex.jsの、return()の<div>の中身を編集していく
+	※returnの中で直接複数行のタグを記述することは出来ない。
+	このdivの中で、各アプリケーションを作成していく。はず。
+	ここで書いた内容がrender()によってhtmlの#root(id)要素に反映(追加)される
