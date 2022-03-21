@@ -23,3 +23,6 @@ github.ioにデプロイ
 	参考:
 		https://web-begginer-log.com/create-react-app-gh-pages/#toc2
 		https://qiita.com/star__hoshi/items/490959aee12dbf528f7c
+
+	Routerみたいなの、公開するページごとにURLを分けられるらしい？
+		https://reffect.co.jp/react/react-router
