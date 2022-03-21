@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <!-- このテンプレートを使用: https://www.webdesignleaves.com/pr/jquery/react_basic_01.html-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+  </head>
+
+  <body>
+
+    <!-- コンポーネントを挿入する div 要素-->
+    <div id="root"></div>
+     
+    <!-- React 本体と ReactDOM の読み込み --> 
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script> 
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script> 
+     
+    <script>
+      //App という名前のコンポーネントを作成
+      class App extends React.Component {
+        render() {
+          return React.createElement('h1', null, 'Hello world!');
+        }
+      }
+      //上記 App コンポーネントを div#root に表示
+      ReactDOM.render(React.createElement(App, null), document.getElementById('root'));  
+    </script>
+  </body>
+</html> 
