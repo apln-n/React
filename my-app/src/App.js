@@ -1,12 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+//import { BrowserRouter, Route } from 'react-router-dom';
 
 //return()のdivの中に具体的なアプリケーションを書いていく
 
 function App() {
   var enemyHandText="", myHandText=""
   const handsDict = {"Rock":"グー", "Scissors":"チョキ", "Paper":"パー", "":""}
-  const resultsDict = {"win":"勝ち", "lose":"負け", "draw":"あいこ"}
 
   //「続ける」を押した後、手の画像が縦並びに表示される
   function pressMyRock(){
@@ -35,7 +34,7 @@ function App() {
     //使わなかった手を非表示にする
     let enemyHands = document.querySelectorAll("div.Enemy > img")
     for (let i=0;i<enemyHands.length;i++){
-      if(enemyHands[i].className != enemyHandText){
+      if(enemyHands[i].className !== enemyHandText){
         enemyHands[i].style = "display: none"
       }
     }
@@ -43,9 +42,9 @@ function App() {
   }
   function result(){
     const d = {"Rock":1, "Scissors":2, "Paper":3}
-    if( (3+d[enemyHandText]-d[myHandText]) % 3 == 1){
+    if( (3+d[enemyHandText]-d[myHandText]) % 3 === 1){
       document.getElementById('result').innerHTML = "あなたの勝ち!"
-    }else if( (3+d[enemyHandText]-d[myHandText]) % 3 == 2){
+    }else if( (3+d[enemyHandText]-d[myHandText]) % 3 === 2){
       document.getElementById('result').innerHTML = "あなたの負け!"
     }else{
       document.getElementById('result').innerHTML = "あいこ!"
@@ -67,7 +66,6 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
     <div className="App">
       <h1>じゃんけん</h1>
       <div className="Enemy">
@@ -92,7 +90,6 @@ function App() {
       <div id="result"></div>
       <button id="continue" onClick={pressContinue}>続ける</button>
     </div>
-    </BrowserRouter>
   );
 }
 
