@@ -22,12 +22,13 @@ github.ioにデプロイ
 	最初だけ
 		npm install gh-pages --save-dev
 		"homepage": "./"
-			むやみに触ってはいけない
+			むやみに触ってはいけない、触ると死ぬ
 		"deploy": "gh-pages -d build"
 
 	2回目以降:
 		npm run build
 			deploy用のファイル作成(npm startで見える物と同じ)
+			※下のnpm run deployをやるなら必要ないかも…？(要確認)
 		npm run deploy
 			デプロイ
 			"private": trueをfalseにすると公開できる
@@ -37,9 +38,24 @@ github.ioにデプロイ
 		https://qiita.com/star__hoshi/items/490959aee12dbf528f7c
 
 
-今後の予定
-	react-router?を使って公開するページごとにURLを分ける
+react-router
+	公開するページごとにURLを分ける
+	これらのページに使い方が書いてある
+		https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md
+  		https://coders-shelf.com/react-router-v6-intro/
+	※ローカルのはv6なので、v5以前の使い方はできない(以下のサイトなど)
 		https://reffect.co.jp/react/react-router
+
+
+今後の予定
+
+	github.ioでreact-routerが上手くいかない
+		以下を試す？
+			https://maku.blog/p/9u8it5f/
+		もしくはbasenameについて調べる(こっちのが出来るなら簡単そう)
+			https://github.com/remix-run/react-router/issues/8427
+
+
 	Reactのチュートリアル的な物がネット上にあった(三目並べ作るみたいな)ので、それをやってみたい
 		https://ja.reactjs.org/tutorial/tutorial.html
 	→そしてまた別の独自のアプリを作ってみたい(じゃんけん以外)
