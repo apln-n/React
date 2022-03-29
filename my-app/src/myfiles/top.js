@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 //Link toの文字列は、Appに書いたRoute pathと合わせる必要がある
 
-function Index() {
-  const index = (
-    <div id="index">
+function Top() {
+  const top = (
+    <div id="top">
       <h1>apln-nのページ</h1>
       <h2>コンテンツ:</h2>
       <div>
@@ -14,8 +14,8 @@ function Index() {
       </div>
     </div>
   );
-  return (index);
+  return (top);
 }
 
 //export default [クラス名]、の形で絶対に書く必要。
-export default Index;
+export default Top;
