@@ -9,8 +9,9 @@ function Top() {
       <h1>apln-nのページ</h1>
       <h2>コンテンツ:</h2>
       <div>
+        <p><Link to="/tutorial">チュートリアル(三目並べ)</Link></p>
         <p><Link to="/Janken">じゃんけん</Link></p>
-        <p><Link to="/Janken">じゃんけん(上と同じ)</Link></p>
+        <p><Link to="/">Topページ</Link></p>
       </div>
     </div>
   );

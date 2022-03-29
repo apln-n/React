@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 //自作のjs(webページ)をクラスとして読み込む(後のRoute elementで要素となってブラウザに表示される)
 import Top from "./myfiles/top";
 import Janken from "./myfiles/Janken";
+import Tutorial from "./myfiles/tutorial";
 
 //return()のdivの中に具体的なアプリケーションを書いていく
 
@@ -19,6 +20,7 @@ function App(){
       <Routes>
         <Route path="/" element={<Top />} />
         <Route path="/Janken" element={<Janken />} />
+        <Route path="/tutorial" element={<Tutorial />} />
       </Routes>
     </BrowserRouter>
   );
