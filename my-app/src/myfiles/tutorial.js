@@ -63,8 +63,7 @@ let Game = function() {
 
 // ========================================
 function func(){
-  var game = new Game();
-  return game.board;
+  return new Game().board;
 }
 
 export default func;
