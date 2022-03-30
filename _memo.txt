@@ -58,5 +58,14 @@ react-router
 
 	Reactのチュートリアル的な物がネット上にあった(三目並べ作るみたいな)ので、それをやってみたい
 		https://ja.reactjs.org/tutorial/tutorial.html
+	↑クラスベースから関数ベースに移行させないとreact-routerで上手く作れない気がした
+		コンストラクタ関数？を使うことで、クラスを使うやり方みたいな挙動を実現できるとか何とか…
+		https://note.affi-sapo-sv.com/js-constructor.php
+
+	もしくは、
+
+
+
 	→そしてまた別の独自のアプリを作ってみたい(じゃんけん以外)
 	→ある程度React慣れたら…いよいよ履歴書(ほぼ出来てる)完成させて提出したい
+		コーディング試験の時はまた新たにリポジトリ作ってcreate-react-appをやる(多分)
