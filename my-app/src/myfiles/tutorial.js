@@ -17,38 +17,45 @@ let Square = function(i) {
       {i}
     </button>
   );
+  this.element = this.button;
+  this.number = i;
 };
 
 let Board = function() {
   const status = 'Next player: X';
 
-  this.Squares = (
+  this.squares = []
+  for(let i=0;i<9;i++){
+    this.squares[i] = new Square(i);
+  }
+  this.element = (
     <div>
       <div className="status">{status}</div>
       <div className="board-row">
-        {new Square(0).button}
-        {new Square(1).button}
-        {new Square(2).button}
+        {this.squares[0].element}
+        {this.squares[1].element}
+        {this.squares[2].element}
       </div>
       <div className="board-row">
-        {new Square(3).button}
-        {new Square(4).button}
-        {new Square(5).button}
+        {this.squares[3].element}
+        {this.squares[4].element}
+        {this.squares[5].element}
       </div>
       <div className="board-row">
-        {new Square(6).button}
-        {new Square(7).button}
-        {new Square(8).button}
+        {this.squares[6].element}
+        {this.squares[7].element}
+        {this.squares[8].element}
       </div>
     </div>
   );
 }
 
 let Game = function() {
-  this.board = (
+  this.board = new Board();
+  this.element = (
     <div className="game">
       <div className="game-board">
-        {new Board().Squares}
+        {this.board.element}
       </div>
       <div className="game-info">
         <div>{/* status */}</div>
@@ -63,7 +70,9 @@ let Game = function() {
 
 // ========================================
 function func(){
-  return new Game().board;
+  var game = new Game()
+  //console.log("The text of button[8] is \""+ game.board.squares[8].number + "\".");
+  return game.element;
 }
 
 export default func;

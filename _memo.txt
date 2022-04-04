@@ -62,8 +62,9 @@ react-router
 		コンストラクタ関数？を使うことで、クラスを使うやり方みたいな挙動を実現できるとか何とか…
 		https://note.affi-sapo-sv.com/js-constructor.php
 
-	もしくは、
-
+	もしくは、main/docに置く方法？を考える
+		gh-pages使わなくてもできる説がある
+		いずれにせよSPAならreact-router使う意味があんまりないので
 
 
 	→そしてまた別の独自のアプリを作ってみたい(じゃんけん以外)
