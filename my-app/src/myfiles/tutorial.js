@@ -1,9 +1,7 @@
 /*
   公式チュートリアル(三目並べ)
     https://ja.reactjs.org/tutorial/tutorial.html#setup-option-2-local-development-environment
-  ES6以前のクラス定義の実現(これで作りたい)
-    https://www.yunabe.jp/docs/javascript_class_in_google.html
-    this.を使うことでクラスの属性みたいに扱えるようになる
+  このファイルはクラスベースの記述。
 */
 
 import React from 'react';
