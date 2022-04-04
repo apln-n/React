@@ -7,7 +7,8 @@ npm start
 
 基本的にindex.jsの、return()の<div>の中身を編集していく
 	※returnの中で直接複数行のタグを記述することは出来ない。
-	このdivの中で、各アプリケーションを作成していく。はず。
+	このdivの中で、各アプリケーションを作成していく。
+		実際は外部のApp.jsとかをインポートしてreturn(<App />);の形で記述する
 	ここで書いた内容がrender()によってhtmlの#root(id)要素に反映(追加)される
 
 Sublime Textで、右下の"JavaScript"を"JSX"にした方がコード書きやすい
@@ -56,20 +57,25 @@ react-router
 			https://maku.blog/p/9u8it5f/
 		もしくはbasenameについて調べる(こっちのが出来るなら簡単そう)
 			https://github.com/remix-run/react-router/issues/8427
+		※保留
+
 
 
 	Reactのチュートリアル的な物がネット上にあった(三目並べ作るみたいな)ので、それをやってみたい
 		https://ja.reactjs.org/tutorial/tutorial.html
-	↑クラスベースから関数ベースに移行させないとcreate-react-appのプロジェクトでは作れない？
-		react-routerは使えそう
+		クラスコンポートネントより関数コンポーネントを使う方法が現在主流らしい
+			関数のが書きやすく、Hookを使うことでクラスで使ってたsetState()とかも使えるようになるらしい
+				https://zenn.dev/swata_dev/articles/7f8ef4333057d7
+			react-routerはどちらの方法でも使える
 
 
-	もしくは、main/docに置く方法？を考える
+	SPAをmain/docに置く方法？
 		gh-pages使わなくてもできる説がある
-		いずれにせよSPAならreact-router使う意味があんまりないので
+		SPAならreact-router使わない
 
-
-	(重要)テンプレート使わない形で記述しておきたい
+	テンプレート使わない形で記述しておきたい
+		テンプレートというか開発環境そのものだったので消してはいけなかった…
+			npm install react-scriptsやるならどっちでも良さそう
 
 
 	→そしてまた別の独自のアプリを作ってみたい(じゃんけん以外)
