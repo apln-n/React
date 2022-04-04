@@ -10,69 +10,88 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
 
-
-let Square = function(i) {
-  this.state = {value: null};
-  this.button = (
-    <button className="square" onClick={() => function(){this.state.value = 'X';}}>
-      {this.state.value}
+function Square(props) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
     </button>
-  );
-  this.element = this.button;
-};
-
-let Board = function() {
-  const status = 'Next player: X';
-
-  this.squares = []
-  for(let i=0;i<9;i++){
-    this.squares[i] = new Square(i);
-  }
-  this.element = (
-    <div>
-      <div className="status">{status}</div>
-      <div className="board-row">
-        {this.squares[0].element}
-        {this.squares[1].element}
-        {this.squares[2].element}
-      </div>
-      <div className="board-row">
-        {this.squares[3].element}
-        {this.squares[4].element}
-        {this.squares[5].element}
-      </div>
-      <div className="board-row">
-        {this.squares[6].element}
-        {this.squares[7].element}
-        {this.squares[8].element}
-      </div>
-    </div>
   );
 }
 
-let Game = function() {
-  this.board = new Board();
-  this.element = (
-    <div className="game">
-      <div className="game-board">
-        {this.board.element}
+class Board extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      squares: Array(9).fill(null),
+      xIsNext: true,
+    };
+  }
+
+  handleClick(i) {
+    const _squares = this.state.squares.slice();
+    _squares[i] = this.state.xIsNext ? 'X' : 'O';
+    //setStateの中では、this.stateを省略して直接このクラスにある属性の名前を書く(属性名: 代入したい値 の形)
+    this.setState({
+      squares: _squares,
+      xIsNext: !this.state.xIsNext,
+    });
+  }
+
+  renderSquare(i) {
+    return (
+      <Square
+        value={this.state.squares[i]}
+        onClick={() => this.handleClick(i)}
+      />
+    );
+  }
+
+  render() {
+    const status = 'Next player: X';
+
+    return (
+      <div>
+        <div className="status">{status}</div>
+        <div className="board-row">
+          {this.renderSquare(0)}
+          {this.renderSquare(1)}
+          {this.renderSquare(2)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
+        </div>
       </div>
-      <div className="game-info">
-        <div>{/* status */}</div>
-        <ol>{/* TODO */}</ol>
+    );
+  }
+}
+
+class Game extends React.Component {
+  render() {
+    return (
+      <div className="game">
+        <div className="game-board">
+          <Board />
+        </div>
+        <div className="game-info">
+          <div>{/* status */}</div>
+          <ol>{/* TODO */}</ol>
+        </div>
       </div>
-      <div className="back-to-top">
-        <p><Link to="/">ホームに戻る</Link></p>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 // ========================================
+
 function func(){
-  var game = new Game()
-  //console.log("The text of button[8] is \""+ game.board.squares[8].state.value + "\".");
-  return game.element;
+  return <Game />;
 }
 
 export default func;

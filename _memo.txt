@@ -58,9 +58,9 @@ react-router
 
 	Reactのチュートリアル的な物がネット上にあった(三目並べ作るみたいな)ので、それをやってみたい
 		https://ja.reactjs.org/tutorial/tutorial.html
-	↑クラスベースから関数ベースに移行させないとreact-routerで上手く作れない気がした
-		コンストラクタ関数？を使うことで、クラスを使うやり方みたいな挙動を実現できるとか何とか…
-		https://note.affi-sapo-sv.com/js-constructor.php
+	↑クラスベースから関数ベースに移行させないとcreate-react-appのプロジェクトでは作れない？
+		react-routerは使えそう
+
 
 	もしくは、main/docに置く方法？を考える
 		gh-pages使わなくてもできる説がある
