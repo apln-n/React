@@ -12,13 +12,13 @@ import { Link } from "react-router-dom";
 
 
 let Square = function(i) {
+  this.state = {value: null};
   this.button = (
-    <button className="square">
-      {i}
+    <button className="square" onClick={() => function(){this.state.value = 'X';}}>
+      {this.state.value}
     </button>
   );
   this.element = this.button;
-  this.number = i;
 };
 
 let Board = function() {
@@ -71,7 +71,7 @@ let Game = function() {
 // ========================================
 function func(){
   var game = new Game()
-  //console.log("The text of button[8] is \""+ game.board.squares[8].number + "\".");
+  //console.log("The text of button[8] is \""+ game.board.squares[8].state.value + "\".");
   return game.element;
 }
 
