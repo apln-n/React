@@ -10,6 +10,8 @@ npm start
 	このdivの中で、各アプリケーションを作成していく。はず。
 	ここで書いた内容がrender()によってhtmlの#root(id)要素に反映(追加)される
 
+Sublime Textで、右下の"JavaScript"を"JSX"にした方がコード書きやすい
+
 
 npm startできなくなった場合
 	create-react-appで作ったディレクトリ以外の、node_modulesを全て削除して解決できた
