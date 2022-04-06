@@ -5,6 +5,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Top from "./myfiles/top";
 import Janken from "./myfiles/Janken";
 import Tutorial from "./myfiles/tutorial";
+import ForCheckBehavior from "./myfiles/forCheckBehavior";
 
 //return()のdivの中に具体的なアプリケーションを書いていく
 
@@ -21,6 +22,7 @@ function App(){
         <Route path="/" element={<Top />} />
         <Route path="/Janken" element={<Janken />} />
         <Route path="/tutorial" element={<Tutorial />} />
+        <Route path="/forCheckBehavior" element={<ForCheckBehavior />} />
       </Routes>
     </BrowserRouter>
   );

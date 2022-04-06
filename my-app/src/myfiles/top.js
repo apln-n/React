@@ -11,6 +11,7 @@ function Top() {
       <div>
         <p><Link to="/tutorial">チュートリアル(三目並べ)</Link></p>
         <p><Link to="/Janken">じゃんけん</Link></p>
+        <p><Link to="/forCheckBehavior">挙動チェック用</Link></p>
         <p><Link to="/">Topページ</Link></p>
       </div>
     </div>
