@@ -47,14 +47,14 @@ function myForm() {
         <p>
           <label>おなまえ: </label><input id="name" type="text"/>
         </p>
-        <p>
+        <div>
           <table border="0">
             <tbody>
               {li.map((n,key) => <OneStatus n={n} key={key} myKey={key}/>)}
             </tbody>
           </table>
-        </p>
-        <p>
+        </div>
+        <div>
           <table border="0">
             <tbody>
               <tr>
@@ -63,7 +63,7 @@ function myForm() {
               </tr>
             </tbody>
           </table>
-        </p>
+        </div>
       </div>
     </div>
   );
