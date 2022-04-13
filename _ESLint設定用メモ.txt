@@ -1,0 +1,45 @@
+※コマンドは全部、package.jsonが存在するディレクトリで実行する
+
+インストール
+	npx eslint --init
+		eslintをローカルインストール
+		最初にいくつか設定(質問)が入る
+			JSONを指定すると後が楽
+
+	package.jsonのscriptsに "lint": "eslint" を追加
+		別にやらなくて良さそう…
+		バージョン情報(devdependenciesへの追加)は、eslintをローカルインストールした時に自動で記述される			
+
+	参考:
+		https://zenn.dev/ro_komatsuna/articles/eslint_setup#fn-749a-1
+		https://qiita.com/mysticatea/items/6bd56ff691d3a1577321
+
+
+実行: npm run lint 指定したいファイルのパス.jsx
+	package.jsonを置いた場所からの相対パス
+	*.jsxで複数ファイルも指定できる。
+		https://www.webprofessional.jp/up-and-running-with-eslint-the-pluggable-javascript-linter/
+
+
+ルール編集
+	.eslintrc.jsonの"rules"
+	参考:
+		https://qiita.com/mysticatea/items/f523dab04a25f617c87d#-%E3%83%AB%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E4%BD%BF%E3%81%86
+	※Prettierのコード成形とESLintのデバッグ？(ルール)を競合させないために……
+		ESLintの.eslintrc.jsonの"extends"に"prettier"を追加する
+		https://qiita.com/soarflat/items/06377f3b96964964a65d#eslintrc%E3%81%AE%E8%A8%AD%E5%AE%9A
+
+
+
+その他
+	Parsing error: unexpected token …
+		jsxのタグ関係なら、.eslintrc.jsonの、parserOptions.ecmaFeatures.jsx: true にすれば良い
+		それ以外は……普通にタイプミスの可能性大。
+	Warning: React version not specified in eslint-plugin-react settings.
+		.eslintrc.jsonに"settings"を追加すると直る
+			https://blog.freks.jp/remove-eslint-react-plugin-warning/
+
+	error: '(コンポーネントの引数?)' is missing in props validation'
+		prop-typesを使って明示的に指定することで解決可能
+		https://ja.reactjs.org/docs/typechecking-with-proptypes.html
+

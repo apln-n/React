@@ -1,0 +1,32 @@
+※ESLintをインストールした後にやった
+--save-devオプションは、ローカルインストールを指定するため
+
+参考:
+    https://qiita.com/soarflat/items/06377f3b96964964a65d
+
+
+---------------------重要------------------------
+    本番？では、npm scriptsでPrettierとESLintを簡単に実行できるようにしたい
+        https://qiita.com/soarflat/items/06377f3b96964964a65d#npm-scripts-%E3%81%A7-prettier-%E3%81%A8-eslint-%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B
+-------------------------------------------------
+
+
+インストール
+    npm install prettier --save-dev
+
+ESLintとの併用
+    npm install eslint@7.26.0 eslint-config-prettier@8.3.0 --save-dev
+
+
+
+実行
+    Prettierやるだけなら…
+        Prettier <ソースコードのパス>
+    --write オプションで上書きできる
+        無しならコンソールにPrettierの結果が出るだけ
+
+
+
+ルール設定
+    .prettierrc.jsonファイルを作成し、記述
+        このファイル自体無くても動くといえば動く、多分デフォルトのルールが適用されている
