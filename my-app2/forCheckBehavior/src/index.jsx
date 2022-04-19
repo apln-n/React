@@ -1,5 +1,5 @@
-//import React from 'react';
-//import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 //import './index.css';
 //import reportWebVitals from './reportWebVitals';
 
@@ -8,22 +8,18 @@
 //(※とりあえずimportするだけでrenderされるようにしてる…)
 //import Tick from './myfile/tick';
 //import YourStatus from './myfile/yourStatus';
-import ESLintTest from './myfile/ESLintTest';
+//import ESLintTest from './myfile/ESLintTest';
+//import App from './myfile/editStateofParent'
 
-/*
+import App from './myfile/searchYourPrivateTweets'
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
-*/
-
-/*
-  importしてきてる今だけ。'コンポーネント名' is defined but never used を消すために書いた
-  ただしF12の方ではエラー出るので止めておくべき
-*/
-ESLintTest.abcdefg();
 
 /*
   WebVitalが分かる。: ページを読み込むまでの時間、UXの快適さ？などの指標…
